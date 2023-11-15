@@ -5,4 +5,4 @@ dependencies:
   - python=3.8
   - fastapi
   - uvicorn
-  # 예시
+  # myenv - conda 환경 이름 예시
