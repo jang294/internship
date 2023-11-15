@@ -4,10 +4,11 @@ WORKDIR /app
 COPY . /app
 
 # Create a conda environment and activate it
-RUN conda install --file requirements.txt
-
-# Activate the Conda environment
-SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+COPY environment.yml .
+RUN conda env create -f environment.yml
+RUN echo "source activate myenv" > ~/.bashrc
+ENV PATH /opt/conda/envs/myenv/bin:$PATH
+RUN conda init bash
 
 # Expose the port that FastAPI will run on
 EXPOSE 8080
