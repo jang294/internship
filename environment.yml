@@ -3,6 +3,6 @@ channels:
   - defaults
 dependencies:
   - python=3.8
-  - fastapi
+  - fastapi=0.104.1
   - uvicorn
   # myenv - conda 환경 이름 예시
