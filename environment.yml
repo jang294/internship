@@ -3,7 +3,7 @@ channels:
   - defaults
   - conda-forge  # conda-forge 채널 추가
 dependencies:
-  - python=3.8
+  - python=3.10
   - aioredis=2.0.1
   - annotated-types=0.6.0
   - anyio=3.7.1
