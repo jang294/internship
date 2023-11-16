@@ -31,8 +31,8 @@ dependencies:
   - pytz=2023.3.post1
   - pywin32=304
   - PyYAML=5.4.1
-  - redis-py
-  - hiredis
+  - hiredis=2.0.0
+  - redis=5.0.1
   - requests=2.26.0
   - semantic-version=2.8.5
   - six=1.14.0
