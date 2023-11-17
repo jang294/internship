@@ -9,6 +9,9 @@ RUN conda env create -f environment.yml
 RUN echo "source activate myenv" > ~/.bashrc
 ENV PATH /opt/conda/envs/myenv/bin:$PATH
 
+
+# Install additional packages using conda
+RUN conda install -n myenv redis=5.0.1 cement=2.8.2 semantic-version=2.8.5 pypiwin32=223 tzdata=2023.3 numpy=1.26.2 pydantic_core=2.14.1
 RUN pip install --no-cache-dir -r
 
 # Expose the port that FastAPI will run on
